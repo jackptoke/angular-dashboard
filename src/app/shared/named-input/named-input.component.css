@@ -1,0 +1,9 @@
+label {
+  font-weight: 600;
+}
+
+p .named-input {
+  margin: 50px, 50px, 50px, 50px;
+  padding: auto;
+  color:blueviolet;
+}

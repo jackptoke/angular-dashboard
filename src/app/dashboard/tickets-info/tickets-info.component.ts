@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import { DashboardItemComponent } from "../dashboard-item/dashboard-item.component";
+import { NewTicketComponent } from "./new-ticket/new-ticket.component";
 
 @Component({
   selector: 'app-tickets-info',
-  imports: [DashboardItemComponent],
+  imports: [DashboardItemComponent, NewTicketComponent],
   templateUrl: './tickets-info.component.html',
   styleUrl: './tickets-info.component.css'
 })
