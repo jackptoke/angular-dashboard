@@ -1,10 +1,11 @@
-import { Component, input } from '@angular/core';
+import { Component, input, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'button[appButton]',
   imports: [],
   templateUrl: './button.component.html',
-  styleUrl: './button.component.css'
+  styleUrl: './button.component.css',
+  // encapsulation: ViewEncapsulation.None
 })
 export class ButtonComponent {
   // text = input.required<string>();

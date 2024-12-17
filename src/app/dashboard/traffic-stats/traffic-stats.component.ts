@@ -1,9 +1,8 @@
 import { Component } from '@angular/core';
-import { DashboardItemComponent } from "../dashboard-item/dashboard-item.component";
 
 @Component({
   selector: 'app-traffic-stats',
-  imports: [DashboardItemComponent],
+  imports: [],
   templateUrl: './traffic-stats.component.html',
   styleUrl: './traffic-stats.component.css'
 })
@@ -40,9 +39,4 @@ export class TrafficStatsComponent {
   ];
 
   maxTraffic = Math.max(...this.dummyTrafficData.map((data) => data.value));
-
-  imgSrc = "globe.png";
-  imgAlt = "A globe";
-  imageData = { imgSrc: this.imgSrc, imgAlt: this.imgAlt };
-  title = "Traffic";
 }

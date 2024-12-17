@@ -1,5 +1,11 @@
-<app-dashboard-item [imgData]="imageData" [title]="title">
-    <div id="status">
-      <app-new-ticket />
-    </div>
-</app-dashboard-item>
+<div>
+  <ul>
+    @for (ticket of tickets; track ticket.id) {
+      <li>
+        <app-ticket [ticket]="ticket" (ticketStatusUpdate)="onTicketStatusChanged($event)"/> <!-- $first | $last | $odd | $even -->
+      </li>
+    } @empty { <p>No ticket!!</p>}
+  </ul>
+</div>
+<app-new-ticket (newTicket)="onNewTicketCreated($event)" />
+

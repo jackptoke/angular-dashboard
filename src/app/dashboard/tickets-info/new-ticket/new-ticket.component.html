@@ -1,9 +1,9 @@
-<form id="new-ticket">
-  <app-named-input label="Ticket Title" name="title">
-    <input type="text" name="title" id="title" />
+<form id="new-ticket" (ngSubmit)="onSubmit(titleInput.value, requestInput.value)" #form>
+  <app-named-input class="named-input" label="Ticket Title" name="title">
+    <input type="text" name="title" id="title" #titleInput />
   </app-named-input>
-  <app-named-input label="Request" name="request">
-    <textarea name="request" id="request" rows="3"></textarea>
+  <app-named-input class="named-input" label="Request" name="request">
+    <textarea name="request" id="request" rows="3" #requestInput ></textarea>
   </app-named-input>
   <p>
     <button appButton>

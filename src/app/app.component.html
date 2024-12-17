@@ -11,12 +11,18 @@
 <main>
   <div id="dashboard">
     <div class="dashboard-item">
-      <app-server-status />
+      <app-dashboard-item [imgData]="serverImageData" [title]="serverTitle">
+        <app-server-status />
+      </app-dashboard-item>
     </div>
     <div class="dashboard-item">
-      <app-traffic-stats />
+      <app-dashboard-item [imgData]="globeImageData" [title]="dashTitle">
+        <app-traffic-stats />
+      </app-dashboard-item>
     </div>
-    <app-tickets-info />
+    <app-dashboard-item [imgData]="ticketImageData" [title]="ticketTitle">
+      <app-tickets-info />
+    </app-dashboard-item>
   </div>
 </main>
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
